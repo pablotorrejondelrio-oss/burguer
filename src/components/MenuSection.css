@@ -1,0 +1,175 @@
+.menu-section {
+  background: #f0e4dc;
+  padding: 100px 40px 120px;
+}
+
+/* ── Section header ── */
+.menu-section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 24px;
+}
+
+.menu-section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f00;
+}
+
+.menu-section-title {
+  font-family: Helvena, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  color: #000;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* ── Grid ── */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 60px;
+  align-items: stretch;
+}
+
+.menu-grid-right {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ── Category ── */
+.menu-category-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.menu-category-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f00;
+}
+
+.menu-category-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 400;
+  font-style: italic;
+  color: #000;
+  letter-spacing: -0.04em;
+  margin: 0;
+  line-height: 1;
+}
+
+/* ── Category stretch ── */
+.menu-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-category .menu-items-list {
+  flex: 1;
+}
+
+/* ── Items list ── */
+.menu-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-dish {
+  padding: 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-dish:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.menu-dish-top {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.menu-dish-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 14px;
+  color: #f00;
+  flex-shrink: 0;
+  letter-spacing: -0.04em;
+}
+
+.menu-dish-name {
+  font-family: Helvena, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: #000;
+  white-space: nowrap;
+}
+
+.menu-dish-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 4px;
+}
+
+.menu-dish-price {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(16px, 1.5vw, 20px);
+  color: #f00;
+  flex-shrink: 0;
+  letter-spacing: -0.04em;
+}
+
+.menu-dish-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.55);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .menu-section {
+    padding: 60px 20px 80px;
+  }
+
+  .menu-section-header {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 48px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+}

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400&display=swap');
+
+.historia-section {
+  background: #f0e4dc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  min-height: 100vh;
+}
+
+/* ── Left: headline ── */
+.historia-top {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px;
+  padding: 60px 40px;
+  grid-column: 1;
+  grid-row: 1;
+  border-right: none;
+  border-image: none;
+}
+
+.historia-top-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.historia-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f00;
+  display: block;
+}
+
+.historia-since {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.historia-headline {
+  font-family: Helvena, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: clamp(52px, 6.5vw, 96px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0;
+}
+
+.historia-headline em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  color: #f00;
+}
+
+/* ── Right: content ── */
+.historia-body {
+  padding: 60px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  grid-column: 2;
+  grid-row: 1;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.historia-intro {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(20px, 2vw, 28px);
+  font-style: italic;
+  color: #000;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+/* ── Chapters ── */
+.historia-chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.historia-chapter {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 24px;
+  padding: 24px 0;
+}
+
+.historia-chapter-year {
+  font-family: 'Instrument Serif', serif;
+  font-size: 15px;
+  color: #f00;
+  letter-spacing: -0.03em;
+  padding-top: 4px;
+}
+
+.historia-chapter-title {
+  font-family: Helvena, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.historia-chapter-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .historia-section {
+    grid-template-columns: 1fr;
+  }
+
+  .historia-top {
+    position: relative;
+    height: auto;
+    padding: 60px 20px 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .historia-body {
+    padding: 40px 20px 60px;
+    gap: 32px;
+    grid-column: 1;
+    grid-row: 2;
+    border-left: none;
+  }
+
+  .historia-chapter {
+    grid-template-columns: 60px 1fr;
+    padding: 20px 0;
+  }
+}

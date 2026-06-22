@@ -4,6 +4,11 @@ import { SplitText } from 'gsap/SplitText'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import AnimatedText from '../components/AnimatedText'
 import Menu from '../components/Menu'
+import Reviews from '../components/Reviews'
+import MenuSection from '../components/MenuSection'
+import Historia from '../components/Historia'
+import Manifesto from '../components/Manifesto'
+import Contacto from '../components/Contacto'
 import './HeroPage.css'
 
 gsap.registerPlugin(SplitText, ScrollTrigger)
@@ -161,6 +166,16 @@ export default function HeroPage() {
           toggleActions: 'play none none none'
         }
       })
+
+      ScrollTrigger.create({
+        trigger: '.reviews-section',
+        start: 'top 60px',
+        end: 'bottom 60px',
+        onEnter: () => gsap.to('.nav-menu-link', { color: '#f0e4dc', duration: 0.3 }),
+        onLeave: () => gsap.to('.nav-menu-link', { color: '#1A1410', duration: 0.3 }),
+        onEnterBack: () => gsap.to('.nav-menu-link', { color: '#f0e4dc', duration: 0.3 }),
+        onLeaveBack: () => gsap.to('.nav-menu-link', { color: '#1A1410', duration: 0.3 }),
+      })
     })
     return () => ctx.revert()
   }, [])
@@ -216,6 +231,11 @@ export default function HeroPage() {
         </div>
       ))}
     </section>
+    <MenuSection />
+    <Historia />
+    <Manifesto />
+    <Reviews />
+    <Contacto />
     <footer className="site-footer">
       <p className="site-footer-text">Esto es el 5%. Un boceto hecho en un rato para enseñarte de qué va esto. Imagínate el 95% que falta: tu carta, tus hamburguesas, tu sitio entero moviéndose así. Si esto ya te ha entrado por los ojos… hablamos.</p>
       <span className="site-footer-tag">hecho con cariño · PRISMA</span>

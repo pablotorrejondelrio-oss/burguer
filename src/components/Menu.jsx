@@ -4,8 +4,8 @@ import './Menu.css'
 
 const ITEMS = [
   { num: '01', label: 'La Burger' },
-  { num: '02', label: 'Ingredientes' },
-  { num: '03', label: 'Nuestra Historia' },
+  { num: '02', label: 'Carta', href: '#carta' },
+  { num: '03', label: 'Nuestra Historia', href: '#historia' },
   { num: '04', label: 'Contacto' },
 ]
 
@@ -53,10 +53,20 @@ export default function Menu({ isOpen, onClose }) {
       </nav>
 
       <ul className="menu-list">
-        {ITEMS.map(({ num, label }, i) => (
+        {ITEMS.map(({ num, label, href }, i) => (
           <li key={i} className="menu-item">
             <div className="menu-item-clip">
-              <div className="menu-item-inner">
+              <div
+                className="menu-item-inner"
+                onClick={() => {
+                  if (href) {
+                    onClose()
+                    setTimeout(() => {
+                      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+                    }, 400)
+                  }
+                }}
+              >
                 <span className="menu-item-num">({num})</span>
                 <span className="menu-item-label">{label}</span>
               </div>

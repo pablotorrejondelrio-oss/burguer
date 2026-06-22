@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400&display=swap');
+
+.contacto-section {
+  background: #f0e4dc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* ── Left ── */
+.contacto-top {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.contacto-top-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacto-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f00;
+}
+
+.contacto-since {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.contacto-headline {
+  font-family: Helvena, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: clamp(64px, 9vw, 130px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0;
+}
+
+.contacto-headline em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  color: #f00;
+}
+
+/* ── Right ── */
+.contacto-details {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 48px;
+}
+
+.contacto-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contacto-block-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.35);
+  margin-bottom: 10px;
+}
+
+.contacto-block-line {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(18px, 1.8vw, 26px);
+  font-style: italic;
+  color: #000;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .contacto-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .contacto-top {
+    padding: 60px 20px 40px;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    gap: 48px;
+  }
+
+  .contacto-details {
+    padding: 48px 20px 60px;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+}
