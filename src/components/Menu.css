@@ -1,0 +1,128 @@
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 200;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 32px 40px;
+  will-change: transform;
+}
+
+@media (max-width: 600px) {
+  .menu-overlay {
+    width: 100%;
+  }
+}
+
+/* ── Nav ── */
+.menu-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.menu-nav-brand {
+  color: #f00;
+  font-family: Helvena, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-transform: lowercase;
+}
+
+.menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: Helvena, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.9px;
+  text-decoration: underline;
+  text-decoration-thickness: auto;
+  padding: 0;
+  padding-top: 5px;
+}
+
+/* ── List ── */
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.menu-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.menu-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.menu-item-clip {
+  overflow: hidden;
+  padding: 16px 0;
+}
+
+.menu-item-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.menu-item-inner:hover .menu-item-label {
+  color: #f00;
+}
+
+.menu-item-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(14px, 1.5vw, 22px);
+  color: #f00;
+  letter-spacing: -0.05em;
+  flex-shrink: 0;
+}
+
+.menu-item-label {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(48px, 8.5vw, 120px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  color: #fff;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+/* ── Footer ── */
+.menu-footer {
+  flex-shrink: 0;
+  text-align: right;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(14px, 1.5vw, 20px);
+  color: #f00;
+  letter-spacing: -0.05em;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .menu-item-clip {
+    padding: 12px 0;
+  }
+
+  .menu-item-label {
+    font-size: clamp(36px, 11vw, 60px);
+  }
+}
